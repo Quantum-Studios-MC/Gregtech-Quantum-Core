@@ -1,0 +1,13 @@
+// Add any additional repositories for your dependencies here
+
+repositories {
+	mavenCentral()
+	
+	maven {
+		name = "GTCEu Maven"
+		url = "https://maven.gtceu.com"}
+	
+	maven { 
+		url "https://cursemaven.com"
+	}
+}
