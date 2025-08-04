@@ -2,7 +2,10 @@ package com.quantumstudios.gtquantumcore.Multiblocks;
 
 import org.jetbrains.annotations.NotNull;
 
+import com.quantumstudios.gtquantumcore.blocks.GTQUMultiblockCasing;
+import com.quantumstudios.gtquantumcore.blocks.MetaBlocksHandler;
 import com.quantumstudios.gtquantumcore.recipes.RecipeMapsHandler;
+import com.quantumstudios.gtquantumcore.render.TexturesHandler;
 
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
@@ -10,9 +13,8 @@ import gregtech.api.metatileentity.multiblock.IMultiblockPart;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.pattern.BlockPattern;
 import gregtech.client.renderer.ICubeRenderer;
-import gregtech.common.blocks.BlockMetalCasing.MetalCasingType;
-import gregtech.common.blocks.MetaBlocks;
 import gregtech.api.pattern.FactoryBlockPattern;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 
 public class ElectricalSprengelPump extends RecipeMapMultiblockController 
@@ -32,26 +34,30 @@ public class ElectricalSprengelPump extends RecipeMapMultiblockController
 	protected BlockPattern createStructurePattern()
 	{
 		return FactoryBlockPattern.start()
-				.aisle("FFF")
-				.aisle("#F#")
-				.aisle("FSF")
+				.aisle("FF#","FF#","FFF","#F#")
+				.aisle("FF#","FF#","FSF","#F#")
 				.where('S', selfPredicate())
-				.where('F', states(MetaBlocks.METAL_CASING.getState(MetalCasingType.STEEL_SOLID)).or(autoAbilities()))
-				.where('#', air())	
+				.where('F', states(getCasingState()).or(autoAbilities()))
+				.where('#', any())	
 				.build();
 	}
-
+	
+	private static IBlockState getCasingState() 
+	{
+        return MetaBlocksHandler.MULTIBLOCK_CASING.getState(GTQUMultiblockCasing.CasingType.SEALED_CASING);
+    }
+	
 	//@SideOnly(Side.CLIENT)
 	@Override
 	public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) 
 	{
-		return gregtech.client.renderer.texture.Textures.SOLID_STEEL_CASING;
+		return TexturesHandler.SEALED_CASING;
 	}
 
 	//@SideOnly(Side.CLIENT)
 	@Override
 	protected @NotNull ICubeRenderer getFrontOverlay()
 	{
-		return gregtech.client.renderer.texture.Textures.FORGE_HAMMER_OVERLAY;
+		return TexturesHandler.ELECTRICAL_SPRENGEL_PUMP_OVERLAY;
 	}
 }
