@@ -1,0 +1,27 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "minecraft:cube_all",
+    "textures": {
+      "all": "gregtech:blocks/rendering_error"
+    }
+  },
+  "variants": {
+    "active=false,variant=lv_pump_station": {
+      "model": "minecraft:cube_bottom_top",
+      "textures": {
+        "top": "gregtech:blocks/casings/gtqu_multiblock_casing/sealed_casing",
+	"side": "gregtech:blocks/casings/gtqu_special_part/lv_pump_station",
+	"bottom": "#top"
+      }
+    },
+	"active=true,variant=lv_pump_station": {
+	      "model": "minecraft:cube_bottom_top",
+	      "textures": {
+	        "top": "gregtech:blocks/casings/gtqu_multiblock_casing/sealed_casing",
+		"side": "gregtech:blocks/casings/gtqu_special_part/lv_pump_station_active",
+		"bottom": "#top"
+	      }
+	    }
+  }
+}
