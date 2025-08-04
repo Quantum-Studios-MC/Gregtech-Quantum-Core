@@ -7,14 +7,12 @@
     }
   },
   "variants": {
-    "variant": {
-      "active=false,lv_pump_station": {
-        "model": "minecraft:cube_bottom_top",
-	"textures": {
-	  "top": "gregtech:blocks/casings/gtqu_multiblock_casing/sealed_casing",
-	  "side": "gregtech:blocks/casings/gtqu_special_part/lv_pump_station",
-	  "bottom": "#top"
-	}
+    "active=false,variant=lv_pump_station": {
+      "model": "minecraft:cube_bottom_top",
+      "textures": {
+        "top": "gregtech:blocks/casings/gtqu_multiblock_casing/sealed_casing",
+	"side": "gregtech:blocks/casings/gtqu_special_part/lv_pump_station",
+	"bottom": "#top"
       }
     }
   }
