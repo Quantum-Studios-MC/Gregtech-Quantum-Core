@@ -1,0 +1,15 @@
+
+# Multiblocks
+gregtech.machine.electrical_sprengel_pump.name=Electrical Sprengel Pump
+
+# Descriptions
+gtquantumcore.multiblock.electrical_sprengel_pump.description=Electrical Sprengel Pump is a multiblock capable of creating semi-vacuum environments using dense heavy fluids such as mercury. It's needed for obtaining higher tier vacuum lamps.
+
+# Casings
+tile.gtqu_multiblock_casing.tombac_casing.name=Sealed Tombac Casing
+
+# Special Parts
+tile.gtqu_special_part.lv_pump_station.name=Pump Station (LV)
+
+# Recipe Maps 
+recipemap.electrical_sprengel_pump.name=Vacuumization
