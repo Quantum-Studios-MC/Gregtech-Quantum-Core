@@ -2,6 +2,7 @@ package com.quantumstudios.gtquantumcore.Multiblocks;
 
 import org.jetbrains.annotations.NotNull;
 
+import com.quantumstudios.gtquantumcore.blocks.BlockSpecialMultiblockPart;
 import com.quantumstudios.gtquantumcore.blocks.GTQUMultiblockCasing;
 import com.quantumstudios.gtquantumcore.blocks.MetaBlocksHandler;
 import com.quantumstudios.gtquantumcore.recipes.RecipeMapsHandler;
@@ -34,10 +35,11 @@ public class ElectricalSprengelPump extends RecipeMapMultiblockController
 	protected BlockPattern createStructurePattern()
 	{
 		return FactoryBlockPattern.start()
-				.aisle("FF#","FF#","FFF","#F#")
-				.aisle("FF#","FF#","FSF","#F#")
+				.aisle("FF#","GF#","FFF","#F#")
+				.aisle("FF#","GF#","FSF","#F#")
 				.where('S', selfPredicate())
-				.where('F', states(getCasingState()).or(autoAbilities()))
+				.where('F', states(getCasingState()).setMinGlobalLimited(7).or(autoAbilities()))
+				.where('G', states(getCasingState2()))
 				.where('#', any())	
 				.build();
 	}
@@ -45,6 +47,11 @@ public class ElectricalSprengelPump extends RecipeMapMultiblockController
 	private static IBlockState getCasingState() 
 	{
         return MetaBlocksHandler.MULTIBLOCK_CASING.getState(GTQUMultiblockCasing.CasingType.SEALED_CASING);
+    }
+	
+	private static IBlockState getCasingState2() 
+	{
+        return MetaBlocksHandler.SPECIAL_PART.getState(BlockSpecialMultiblockPart.BlockSpecialMultiblockPartType.LV_PUMP_STATION);
     }
 	
 	//@SideOnly(Side.CLIENT)
