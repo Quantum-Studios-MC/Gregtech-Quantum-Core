@@ -12,8 +12,8 @@
         "model": "minecraft:cube_all",
         "textures": {
           "all": "gregtech:blocks/casings/gtqu_multiblock_casing/sealed_casing"
-        }
-      }
 	}
+      }
+    }
   }
 }
