@@ -1,10 +1,10 @@
 
 # Multiblocks
 gregtech.machine.electrical_sprengel_pump.name=Electrical Sprengel Pump
-
+gregtech.machine.steam_alloy_blast_furnace.name=Steam Alloy Blast Furnace
 # Descriptions
 gtquantumcore.multiblock.electrical_sprengel_pump.description=Electrical Sprengel Pump is a multiblock capable of creating semi-vacuum environments using dense heavy fluids such as mercury. It's needed for obtaining higher tier vacuum lamps.
-
+gtquantumcore.multiblock.steam_alloy_blast_furnace.name=CHANGE ME
 # Casings
 tile.gtqu_multiblock_casing.tombac_casing.name=Sealed Tombac Casing
 
@@ -13,3 +13,4 @@ tile.gtqu_special_part.lv_pump_station.name=Pump Station (LV)
 
 # Recipe Maps 
 recipemap.electrical_sprengel_pump.name=Vacuumization
+recipemap.steam_alloy_blast_furnace.name=Alloy Blast Furnace
