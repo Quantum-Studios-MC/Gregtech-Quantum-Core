@@ -23,24 +23,20 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 
-public class SteamAlloyBlastFurnace extends RecipeMapSteamMultiblockController {
+public class SteamSprengelPump extends RecipeMapSteamMultiblockController {
 
-    public SteamAlloyBlastFurnace(ResourceLocation metaTileEntityId) {
-        super(metaTileEntityId, RecipeMapsHandler.STEAM_ALLOY_BLAST_FURNACE, CONVERSION_RATE);
+    public SteamSprengelPump(ResourceLocation metaTileEntityId) {
+        super(metaTileEntityId, RecipeMapsHandler.STEAM_SPRENGEL_PUMP, CONVERSION_RATE);
     }
-
 
 
     @Override
     protected @NotNull BlockPattern createStructurePattern() {
         return FactoryBlockPattern.start()
-                .aisle("FFF", "CCC", "CCC", "#C#")
-                .aisle("FFF", "CCC", "CCC", "CCC")
-                .aisle("FFF", "CSC", "CCC", "#C#")
-
-                .where('F', states(getFireboxCasing()).setMinGlobalLimited(1))
-        .where('C', states(getCasing()).setMinGlobalLimited(16).or(autoAbilities()).or(abilities(MultiblockAbility.IMPORT_FLUIDS).or(abilities(MultiblockAbility.EXPORT_FLUIDS))))
+                .aisle("FF#", "FF#", "FFF", "#F#")
+                .aisle("FF#", "FF#", "FSF", "#F#")
                 .where('S', selfPredicate())
+                .where('F', states(getCasingState()).setMinGlobalLimited(7).or(autoAbilities()).or(abilities(MultiblockAbility.IMPORT_FLUIDS).or(abilities(MultiblockAbility.EXPORT_FLUIDS))))
                 .where('#', any())
                 .build();
     }
@@ -48,7 +44,7 @@ public class SteamAlloyBlastFurnace extends RecipeMapSteamMultiblockController {
     @Override
     public boolean hasMaintenanceMechanics() {
         return false
-            ;
+                ;
     }
 
     @Override
@@ -61,44 +57,21 @@ public class SteamAlloyBlastFurnace extends RecipeMapSteamMultiblockController {
         return 1;
     }
 
-
-
-    private static IBlockState getCasing()
-    {
+    private static IBlockState getCasingState() {
         return MetaBlocks.METAL_CASING.getState(BlockMetalCasing.MetalCasingType.BRONZE_BRICKS);
     }
 
-    private static IBlockState getFireboxCasing()
-    {
-        return MetaBlocks.BOILER_FIREBOX_CASING.getState(BlockFireboxCasing.FireboxCasingType.BRONZE_FIREBOX);
-    }
-
-//    @Override
-//    public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-//        return TexturesHandler.SEALED_CASING; //TODO: CHANGE
-//    }
-
     public ICubeRenderer getBaseTexture(IMultiblockPart sourcePart) {
-        if (sourcePart != null && isFireboxPart(sourcePart)) {
-            return lastActive ? Textures.BRONZE_FIREBOX_ACTIVE : Textures.BRONZE_FIREBOX;
-        }
         return Textures.BRONZE_PLATED_BRICKS;
     }
 
-
-    private boolean isFireboxPart(IMultiblockPart sourcePart) {
-        return isStructureFormed() && (((MetaTileEntity) sourcePart).getPos().getY() < getPos().getY());
-    }
-
-    //@SideOnly(Side.CLIENT)
     @Override
-    protected @NotNull ICubeRenderer getFrontOverlay()
-    {
+    protected @NotNull ICubeRenderer getFrontOverlay() {
         return TexturesHandler.ELECTRICAL_SPRENGEL_PUMP_OVERLAY;
     }
 
     @Override
     public MetaTileEntity createMetaTileEntity(IGregTechTileEntity tileEntity) {
-        return new SteamAlloyBlastFurnace(metaTileEntityId);
+        return new SteamSprengelPump(metaTileEntityId);
     }
 }

@@ -1,5 +1,6 @@
 package com.quantumstudios.gtquantumcore.Multiblocks;
 
+import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import org.jetbrains.annotations.NotNull;
 
 import com.quantumstudios.gtquantumcore.blocks.BlockSpecialMultiblockPart;
@@ -38,7 +39,7 @@ public class ElectricalSprengelPump extends RecipeMapMultiblockController
 				.aisle("FF#","GF#","FFF","#F#")
 				.aisle("FF#","GF#","FSF","#F#")
 				.where('S', selfPredicate())
-				.where('F', states(getCasingState()).setMinGlobalLimited(7).or(autoAbilities()))
+				.where('F', states(getCasingState()).setMinGlobalLimited(7).or(autoAbilities()).or(abilities(MultiblockAbility.IMPORT_FLUIDS).or(abilities(MultiblockAbility.EXPORT_FLUIDS))))
 				.where('G', states(getCasingState2()))
 				.where('#', any())	
 				.build();
