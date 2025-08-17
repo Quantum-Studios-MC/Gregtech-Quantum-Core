@@ -3,6 +3,8 @@ package com.quantumstudios.gtquantumcore.proxy;
 import java.util.Objects;
 import java.util.function.Function;
 
+import com.quantumstudios.gtquantumcore.loaders.recipes.GTQuantumCoreRecipeHandler;
+import net.minecraft.item.crafting.IRecipe;
 import com.quantumstudios.gtquantumcore.Multiblocks.MultiblockHandler;
 import com.quantumstudios.gtquantumcore.api.unification.material.modifications.GTQuantumCoreExtraFlags;
 import com.quantumstudios.gtquantumcore.blocks.MetaBlocksHandler;

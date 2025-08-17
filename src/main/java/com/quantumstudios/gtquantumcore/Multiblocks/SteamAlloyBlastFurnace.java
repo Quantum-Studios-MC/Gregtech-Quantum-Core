@@ -7,6 +7,7 @@ import com.quantumstudios.gtquantumcore.render.TexturesHandler;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.metatileentity.interfaces.IGregTechTileEntity;
 import gregtech.api.metatileentity.multiblock.IMultiblockPart;
+import gregtech.api.metatileentity.multiblock.MultiblockAbility;
 import gregtech.api.metatileentity.multiblock.RecipeMapMultiblockController;
 import gregtech.api.metatileentity.multiblock.RecipeMapSteamMultiblockController;
 import gregtech.api.pattern.BlockPattern;
@@ -38,7 +39,7 @@ public class SteamAlloyBlastFurnace extends RecipeMapSteamMultiblockController {
                 .aisle("FFF", "CSC", "CCC", "#C#")
 
                 .where('F', states(getFireboxCasing()).setMinGlobalLimited(4).or(autoAbilities(true, false, true, true, false)))
-                .where('C', states(getCasing()).setMinGlobalLimited(16).or(autoAbilities()))
+                .where('C', states(getCasing()).setMinGlobalLimited(16).or(autoAbilities()).or(abilities(MultiblockAbility.IMPORT_FLUIDS).or(abilities(MultiblockAbility.EXPORT_FLUIDS))))
                 .where('S', selfPredicate())
                 .where('#', any())
                 .build();

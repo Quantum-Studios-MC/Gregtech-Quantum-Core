@@ -9,10 +9,11 @@ import static gregtech.api.GTValues.M;
 
 public class GTQuantumCoreOrePrefix {
 
-    public static final OrePrefix mesh = new OrePrefix("mesh", M, null, GTQuantumCoreMaterialIconType.mesh,
+    public static final OrePrefix mesh = new OrePrefix("mesh", M / 2, null, GTQuantumCoreMaterialIconType.mesh,
             ENABLE_UNIFICATION, mat -> mat.hasFlag(GTQuantumCoreMaterialFlags.GENERATE_MESH));
 
-    public static final OrePrefix billet = new OrePrefix("billet", -1 , null, GTQuantumCoreMaterialIconType.billet,
+    public static final OrePrefix billet = new OrePrefix("billet", (M + 1) / 2 + 3
+            , null, GTQuantumCoreMaterialIconType.billet,
             ENABLE_UNIFICATION, mat -> mat.hasFlag(GTQuantumCoreMaterialFlags.GENERATE_BILLET));
 
     public static final OrePrefix wiredense = new OrePrefix("wiredense", M, null, GTQuantumCoreMaterialIconType.wiredense,
