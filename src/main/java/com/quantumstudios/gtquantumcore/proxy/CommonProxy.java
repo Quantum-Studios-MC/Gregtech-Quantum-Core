@@ -4,6 +4,9 @@ import java.util.Objects;
 import java.util.function.Function;
 
 import com.quantumstudios.gtquantumcore.Multiblocks.MultiblockHandler;
+import com.quantumstudios.gtquantumcore.api.unification.material.modifications.GTQuantumCoreExtraFlags;
+import com.quantumstudios.gtquantumcore.blocks.MetaBlocksHandler;
+import com.quantumstudios.gtquantumcore.recipes.MachineRecipeHandler;
 import com.quantumstudios.gtquantumcore.blocks.MetaBlocksHandler;
 import com.quantumstudios.gtquantumcore.recipes.MachineRecipeHandler;
 
@@ -34,7 +37,11 @@ public class CommonProxy
 	{
 		MultiblockHandler.init();
 	}
-	
+
+	public void init() {
+		GTQuantumCoreExtraFlags.register();
+	}
+
 	public void postInit(FMLPostInitializationEvent e)
 	{
 		MachineRecipeHandler.init();
@@ -61,4 +68,7 @@ public class CommonProxy
         itemBlock.setRegistryName(Objects.requireNonNull(block.getRegistryName()));
         return itemBlock;
     }
+
+
+
 }

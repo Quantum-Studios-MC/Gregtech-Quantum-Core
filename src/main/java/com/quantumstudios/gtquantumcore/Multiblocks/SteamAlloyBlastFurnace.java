@@ -38,7 +38,7 @@ public class SteamAlloyBlastFurnace extends RecipeMapSteamMultiblockController {
                 .aisle("FFF", "CSC", "CCC", "#C#")
 
                 .where('F', states(getFireboxCasing()).setMinGlobalLimited(4).or(autoAbilities(true, false, true, true, false)))
-                .where('C', states(getCasing()).setMinGlobalLimited(16).or(autoAbilities(true, false, true, true, false)))
+                .where('C', states(getCasing()).setMinGlobalLimited(16).or(autoAbilities()))
                 .where('S', selfPredicate())
                 .where('#', any())
                 .build();

@@ -14,3 +14,13 @@ tile.gtqu_special_part.lv_pump_station.name=Pump Station (LV)
 # Recipe Maps 
 recipemap.electrical_sprengel_pump.name=Vacuumization
 recipemap.steam_alloy_blast_furnace.name=Alloy Blast Furnace
+
+# OrePrefixes
+
+item.material.oreprefix.mesh=%s Mesh
+item.material.oreprefix.billet=%s Billet
+item.material.oreprefix.ntmpipe=%s Pipe
+item.material.oreprefix.wiredense=%s Dense Wire
+item.material.oreprefix.shell=%s Shell
+item.material.oreprefix.plateTriple=Cast %s Plate
+item.material.oreprefix.plateSextuple=Welded %s Plate
