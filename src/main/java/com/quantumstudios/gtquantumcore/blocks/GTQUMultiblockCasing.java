@@ -27,7 +27,9 @@ public class GTQUMultiblockCasing extends VariantBlock<GTQUMultiblockCasing.Casi
 	public enum CasingType implements IStringSerializable 
 	{
 
-		SEALED_CASING("tombac_casing");
+		SEALED_CASING("tombac_casing"),
+        NICKEL_STEEL_CASING("nickel_steel_casing");
+
 
         private final String name;
 

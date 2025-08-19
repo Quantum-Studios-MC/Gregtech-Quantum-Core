@@ -1,13 +1,26 @@
+# Singleblocks
+
+gtquantumcore.machine.steam_ammo_press.name=Steam Ammo Press
+
+gregtech.machine.steam_furnace_bronze.tooltip=Making Weapons and Ammo with Steam
+gregtech.machine.steam_furnace_steel.name=High Pressure Steam Ammo Press
+gregtech.machine.steam_furnace_steel.tooltip=Making Weapons and Ammo with Steam
 
 # Multiblocks
 gregtech.machine.electrical_sprengel_pump.name=Electrical Sprengel Pump
 gregtech.machine.steam_alloy_blast_furnace.name=Steam Alloy Blast Furnace
 gregtech.machine.steam_sprengel_pump.name=Steam Sprengel Pump
+gregtech.machine.steam_wiremill.name=Steam Wiremill
+gregtech.machine.steam_strand_caster.name=Steam Strand Caster
+gregtech.machine.steam_vulcanisation_vat.name=Steam Vulcanisation Vat
+gregtech.machine.electrical_loom.name=Electrical Loom
+
 # Descriptions
 gtquantumcore.multiblock.electrical_sprengel_pump.description=Electrical Sprengel Pump is a multiblock capable of creating semi-vacuum environments using dense heavy fluids such as mercury. It's needed for obtaining higher tier vacuum lamps.
-gtquantumcore.multiblock.steam_alloy_blast_furnace.name=CHANGE ME
+gtquantumcore.multiblock.steam_alloy_blast_furnace.name=CHANGE
 # Casings
 tile.gtqu_multiblock_casing.tombac_casing.name=Sealed Tombac Casing
+tile.gtqu_multiblock_casing.nickel_steel_casing.name=Nickel Steel Casing
 
 # Special Parts
 tile.gtqu_special_part.lv_pump_station.name=Pump Station (LV)
@@ -16,6 +29,8 @@ tile.gtqu_special_part.lv_pump_station.name=Pump Station (LV)
 recipemap.electrical_sprengel_pump.name=Vacuumization
 recipemap.steam_alloy_furnace.name=Steam Alloy Blast Furnace
 recipemap.steam_sprengel_pump.name=Primitive Vacuumization
+recipemap.vulcanisation_vat.name=Primitive Vulcanising
+recipemap.electrical_loom.name=Powered Loom
 
 # OrePrefixes
 
@@ -25,4 +40,27 @@ item.material.oreprefix.ntmpipe=%s Pipe
 item.material.oreprefix.wiredense=%s Dense Wire
 item.material.oreprefix.shell=%s Shell
 item.material.oreprefix.plateTriple=Cast %s Plate
-item.material.oreprefix.plateSextuple=Welded %s Plate
+item.material.oreprefix.plateSextuple=Welded %s
+item.material.oreprefix.piston=%s Piston
+item.material.oreprefix.hook=%s Hook
+item.material.oreprefix.nanites=%s Nanites
+item.material.oreprefix.tablet=Runed %s Tablet
+item.material.oreprefix.curvedplate=Curved %s Plate
+item.material.oreprefix.yarn=%s Yarn
+item.material.oreprefix.thread=%s Thread
+
+
+item.material.oreprefix.oreMoonRock=Moon %s Ore
+item.material.oreprefix.oreMarsRock=Mars %s Ore
+item.material.oreprefix.oreVenusRock=Venus %s Ore
+
+# Tools
+
+item.gt.tool.spindle.name=%s Spindle
+gt.tool.class.spindle=Spindl
+
+item.gt.tool.needle.name=%s Needle
+gt.tool.class.needle=Sewing Needle
+
+item.gt.tool.pot.name=%s Pot
+gt.tool.class.pot=Pot

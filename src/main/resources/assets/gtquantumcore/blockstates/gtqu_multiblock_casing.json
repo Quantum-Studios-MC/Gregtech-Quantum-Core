@@ -8,11 +8,17 @@
   },
   "variants": {
     "variant": {
+      "nickel_steel_casing": {
+        "model": "minecraft:cube_all",
+        "textures": {
+          "all": "gregtech:blocks/casings/gtqu_multiblock_casing/nickel_steel_casing"
+        }
+      },
       "tombac_casing": {
         "model": "minecraft:cube_all",
         "textures": {
           "all": "gregtech:blocks/casings/gtqu_multiblock_casing/sealed_casing"
-	}
+        }
       }
     }
   }

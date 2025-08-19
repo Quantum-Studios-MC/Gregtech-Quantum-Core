@@ -12,10 +12,18 @@ public class RecipeMapsHandler
 	//		.setProgressBar()
 
 	public static final RecipeMap<SimpleRecipeBuilder> STEAM_ALLOY_BLAST_FURNACE = new RecipeMap<>("steam_alloy_furnace", 4, 0, 1, 1,
+			new SimpleRecipeBuilder().duration(10).EUt(6), false);
+
+	public static final RecipeMap<SimpleRecipeBuilder> VULCANISATION_VAT = new RecipeMap<>("vulcanisation_vat", 2, 1, 1, 1,
+			new SimpleRecipeBuilder().duration(10).EUt(6), false);
+
+	public static final RecipeMap<SimpleRecipeBuilder> STEAM_SPRENGEL_PUMP = new RecipeMap<>("steam_sprengel_pump", 3, 1, 1, 1,
+			new SimpleRecipeBuilder().duration(10).EUt(6), false);
+
+	public static final RecipeMap<SimpleRecipeBuilder> ELECTRICAL_LOOM = new RecipeMap<>("electrical_loom", 3, 1, 0, 0,
+			new SimpleRecipeBuilder().duration(10).EUt(6), false);
+
+
+	public static final RecipeMap<SimpleRecipeBuilder> AMMO_PRESS = new RecipeMap<>("ammo_press", 4, 1, 1, 0,
 			new SimpleRecipeBuilder().duration(10).EUt(8), false);
-
-		public static final RecipeMap<SimpleRecipeBuilder> STEAM_SPRENGEL_PUMP = new RecipeMap<>("steam_sprengel_pump", 3, 1, 0, 0,
-			new SimpleRecipeBuilder().duration(10).EUt(8), false);
-
-
 }

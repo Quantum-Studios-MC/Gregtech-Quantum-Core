@@ -44,9 +44,11 @@ dependencies {
 	implementation "curse.maven:codechicken-lib-1-8-242818:2779848"
 	implementation "curse.maven:gregtech-ce-unnoficial-557242:5519022-deobf-5519023-sources-5519024"
 	implementation("curse.maven:gregicality-multiblocks-564858:5619513")
-	
+	implementation rfg.deobf("curse.maven:asmodeuscore-303101:6058953")
+	implementation rfg.deobf("curse.maven:galacticraft-legacy-564236:6364107")
 	//implementation("curse.maven:gregtech-ce-unnoficial-557242:5519022")
 	//implementation("curse.maven:codechikenlib-1-8-242818:2779849")
-	
+	api("appeng:ae2-uel:v0.56.4") { transitive = false }
+	implementation rfg.deobf("curse.maven:pams-harvestcraft-221857:2904825")
 	//implementation("gregtech:gregtech:2.8.10-beta")
 }

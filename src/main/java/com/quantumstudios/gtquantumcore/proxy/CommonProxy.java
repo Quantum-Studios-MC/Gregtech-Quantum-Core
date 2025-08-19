@@ -3,28 +3,26 @@ package com.quantumstudios.gtquantumcore.proxy;
 import java.util.Objects;
 import java.util.function.Function;
 
-import com.quantumstudios.gtquantumcore.loaders.recipes.GTQuantumCoreRecipeHandler;
-import net.minecraft.item.crafting.IRecipe;
-import com.quantumstudios.gtquantumcore.Multiblocks.MultiblockHandler;
+import com.quantumstudios.gtquantumcore.common.metatileentities.Multiblocks.MultiblockHandler;
 import com.quantumstudios.gtquantumcore.api.unification.material.modifications.GTQuantumCoreExtraFlags;
 import com.quantumstudios.gtquantumcore.blocks.MetaBlocksHandler;
+import com.quantumstudios.gtquantumcore.item.GTQuantumCoreMetaitem;
 import com.quantumstudios.gtquantumcore.recipes.MachineRecipeHandler;
-import com.quantumstudios.gtquantumcore.blocks.MetaBlocksHandler;
-import com.quantumstudios.gtquantumcore.recipes.MachineRecipeHandler;
-
-import gregtech.api.block.VariantItemBlock;
+import com.quantumstudios.gtquantumcore.tools.GTQuantumCoreToolItems;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraftforge.event.RegistryEvent;
-
-//import com.quantumstudios.gtquantumcore.multiblocks.MultiblockHandler;
-
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+import gregtech.api.block.VariantItemBlock;
+import net.minecraft.item.ItemBlock;
+
+//import com.quantumstudios.gtquantumcore.multiblocks.MultiblockHandler;
+
 import net.minecraftforge.registries.IForgeRegistry;
 
 @Mod.EventBusSubscriber
@@ -33,6 +31,8 @@ public class CommonProxy
 	public void preInit(FMLPreInitializationEvent e)
 	{
 		MetaBlocksHandler.init();
+		GTQuantumCoreToolItems.init();
+
 	}
 	
 	public void init(FMLInitializationEvent e)
@@ -69,8 +69,4 @@ public class CommonProxy
         ItemBlock itemBlock = producer.apply(block);
         itemBlock.setRegistryName(Objects.requireNonNull(block.getRegistryName()));
         return itemBlock;
-    }
-
-
-
-}
+    }}

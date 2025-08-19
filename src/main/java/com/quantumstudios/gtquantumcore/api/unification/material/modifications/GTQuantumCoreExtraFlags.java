@@ -34,6 +34,13 @@ public class GTQuantumCoreExtraFlags {
         ntmpipe();
         plateTriple();
         plateSextuple();
+        piston();
+        hook();
+        nanites();
+        tablet();
+        curvedplate();
+        thread();
+        yarn();
     }
 
     private static void mesh() {
@@ -75,6 +82,42 @@ public class GTQuantumCoreExtraFlags {
         Material[] materials = { RedAlloy, WroughtIron, Iron, Steel, Gold, Silver, Uranium235};
 
         setFlags(materials, GTQuantumCoreMaterialFlags.GENERATE_WELDED_PLATE);
+    }
+
+    private static void piston() {
+        Material[] materials = { RedAlloy, WroughtIron, Iron, Steel, Gold, Silver, Uranium235};
+
+        setFlags(materials, GTQuantumCoreMaterialFlags.GENERATE_PISTON);
+    }
+
+    private static void hook() {
+        Material[] materials = { RedAlloy, WroughtIron, Iron, Steel, Gold, Silver, Uranium235};
+        setFlags(materials, GTQuantumCoreMaterialFlags.GENERATE_HOOK);
+    }
+
+    private static void tablet() {
+        Material[] materials = { RedAlloy, WroughtIron, Iron, Steel, Gold, Silver, Uranium235};
+        setFlags(materials, GTQuantumCoreMaterialFlags.GENERATE_TABLET);
+    }
+
+    private static void nanites() {
+        Material[] materials = { RedAlloy, WroughtIron, Iron, Steel, Gold, Silver, Uranium235};
+        setFlags(materials, GTQuantumCoreMaterialFlags.GENERATE_NANITES);
+    }
+
+    private static void curvedplate() {
+        Material[] materials = { RedAlloy, WroughtIron, Iron, Steel, Gold, Silver, Uranium235};
+        setFlags(materials, GTQuantumCoreMaterialFlags.GENERATE_CURVED_PLATE);
+    }
+
+    private static void thread() {
+        Material[] materials = { RedAlloy, WroughtIron, Iron, Steel, Gold, Silver, Uranium235};
+        setFlags(materials, GTQuantumCoreMaterialFlags.GENERATE_THREAD);
+    }
+
+    private static void yarn() {
+        Material[] materials = { RedAlloy, WroughtIron, Iron, Steel, Gold, Silver, Uranium235};
+        setFlags(materials, GTQuantumCoreMaterialFlags.GENERATE_YARN);
     }
 
 }
